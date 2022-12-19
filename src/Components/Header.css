@@ -8,6 +8,14 @@
 .myntra-logo{
     width: 60px;
     margin-right: 20px;
+    border-image: round;
+    background-color: bisque;
+    border: 1px solid black;
+}
+
+.myntra-logo:hover{
+    border-image: round;
+    background-color: yellowgreen;
 }
 .cart-logo{
     width: 40px;
@@ -26,6 +34,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 6px;
+    
 }
 .search{
     width: 100%;

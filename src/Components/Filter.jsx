@@ -15,7 +15,7 @@ const Filter = () => {
             <h2>Filter Products</h2>
             <hr />
             <div className='filter'>
-                <p>Gender</p>
+                <p className='gender'>Gender</p>
                 <span>
                     <input type="radio" onChange={() =>
                         productDispatch({
@@ -35,7 +35,10 @@ const Filter = () => {
                         checked={byFemale} />
                     <span>Female</span>
                 </span>
-                <p>Category</p>
+
+
+
+                <p className='category'>Category</p>
                 <span>
                     <input type="checkbox" onChange={() =>
                         productDispatch({

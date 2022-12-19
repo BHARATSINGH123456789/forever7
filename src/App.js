@@ -9,19 +9,19 @@ import OrderConfirmed from './Components/OrderConfirmed'
 
 const App = () => {
   return (
- <>
-    
- <BrowserRouter>
- <Header/>
-    <Routes>
-      <Route path='/' element={<Home/>}/>
-      <Route path='/cart' element={<Cart/>}/>
-      <Route path='/order' element={<OrderConfirmed/>}/>
-      <Route path="/:id" element={<ProductDetail />} />
-    </Routes>
-    </BrowserRouter>
- </>
-    
+    <>
+
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/cart' element={<Cart />} />
+          <Route path='/order' element={<OrderConfirmed />} />
+          <Route path="/:id" element={<ProductDetail />} />
+        </Routes>
+      </BrowserRouter>
+    </>
+
   )
 }
 
