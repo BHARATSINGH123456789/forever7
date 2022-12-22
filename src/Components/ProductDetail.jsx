@@ -8,15 +8,22 @@ import { CartState } from '../Context/Context'
 
 
 const ProductDetail = () => {
-    const {
-        state: { cart },
-        dispatch,
-      } = CartState();
-    
+  const {
+    state: { cart },
+    dispatch,
+  } = CartState();
 
 
+  // console.log("***")
+
+  console.log(cart)
+  // console.log(dispatch)
+  // console.log("***")
   const prodId = useParams()
-  const prodDetail = data.filter((item) => item.link === prodId.id)
+
+  // console.log(prodId)  => prodId=7488102(link)
+
+  const prodDetail = data.filter((item) => item.link === prodId.productDetailRoute)
   const product = prodDetail[0]
 
 
@@ -24,20 +31,20 @@ const ProductDetail = () => {
 
   const handleCart = (product) => {
     if (cartBtn == "Add to cart") {
-        dispatch({
-            type: "ADD_TO_CART",
-            payload: product,
-          })
+      dispatch({
+        type: "ADD_TO_CART",
+        payload: product,
+      })
       setCartBtn("Remove from cart")
     } else {
-        dispatch({
-            type: "REMOVE_FROM_CART",
-            payload: product,
-          })
+      dispatch({
+        type: "REMOVE_FROM_CART",
+        payload: product,
+      })
       setCartBtn("Add to cart")
     }
   }
-console.log(cart)
+
 
   return (
     < div style={{ display: "flex", justifyContent: "space-evenly" }}>
@@ -65,7 +72,7 @@ console.log(cart)
           </span>
         </div>
 
-        <button onClick={()=>handleCart(product)} className='cartBtn'>
+        <button onClick={() => handleCart(product)} className='cartBtn'>
           {cartBtn}
         </button>
       </div>

@@ -1,10 +1,9 @@
-import React from 'react'
-import { useEffect } from 'react';
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react'
+
 import { NavLink } from 'react-router-dom';
 import { CartState } from '../Context/Context';
 import "./Cart.css"
-import trash from "./trash-btn.png"
+import trash from "./img/trash-btn.png"
 
 const Cart = () => {
 
@@ -30,7 +29,7 @@ const Cart = () => {
                             {
                                 cart.map((prod) => {
                                     return <div className='maped-product'>
-                                        <img src={prod.otherImages[0]} className="cart-img" />
+                                        <img src={prod.otherImages[0]} className="cart-img" alt='' />
                                         <strong>{prod.name}</strong>
                                         <strong>Rs {prod.finalPrice}</strong>
                                         <img src={trash} className="trash-btn" onClick={() =>
@@ -38,7 +37,7 @@ const Cart = () => {
                                                 type: "REMOVE_FROM_CART",
                                                 payload: prod,
                                             })
-                                        } />
+                                        } alt="" />
                                     </div>
                                 })
                             }
@@ -49,9 +48,9 @@ const Cart = () => {
                             <p className='total-amount'>Total Amount</p>
                             <p className='sumTotal'>Rs {total}</p>
                             <NavLink to="/order">
-                            <button className='buy-btn'>Buy Now</button>
+                                <button className='buy-btn'>Buy Now</button>
                             </NavLink>
-                           
+
                         </div>
                     </div>
                     :

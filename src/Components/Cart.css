@@ -1,8 +1,10 @@
 .cart-container{
-    width: 100%;
+    padding: 25px;
+    width: 95%;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: antiquewhite;
 }
 .product-container{
     width: 100%;
@@ -20,8 +22,9 @@
     align-items: center;
 }
 .cart-img{
-    height:150px ;
-    width: 150px;
+    margin-bottom: 20px;
+    height:170px ;
+    width: 120px;
 }
 .trash-btn{
     height: 30px;
@@ -35,8 +38,9 @@ strong{
     font-size: 20px;
 }
 .buy-container{
-    height: 80vh;
+    height: 60vh;
     width: 20%;
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,7 +55,8 @@ strong{
 .buy-btn{
     all: unset;
     height: 50px;
-    width: 250px;
+    width: 100px;
+    border-radius: 8px;
     text-align: center;
     background-color:#FED049 ;
     border: 2px solid #DBA39A;

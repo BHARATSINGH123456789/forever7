@@ -1,6 +1,7 @@
 .single-card {
-
-    height: 320px;
+    border: 5px rgb(27, 26, 26);
+    border-radius: 5px;
+    height: 400px;
     width: 200px;
     margin: 10px;
     display: flex;
@@ -16,7 +17,7 @@
 }
 
 .single-card-img {
-
+   
     height: 210px;
     width: 200px;
 

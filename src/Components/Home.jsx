@@ -9,7 +9,7 @@ const Home = () => {
         state: { products },
         productState: { byMale, byFemale, byWhite, byFolded, searchQuery },
     } = CartState();
-    console.log(products)
+
 
     const transformProducts = () => {
         let sortedProducts = products;
@@ -40,15 +40,19 @@ const Home = () => {
 
     return (
         <div className="home">
-        <Filter/>
-        <div className="productContainer">
-          {transformProducts().map((prod,key) => (
-            <SingleProduct prod={prod} key={key} id={key}/>
-          ))}
+
+            <div className="productContainer">
+                {transformProducts().map((prod, key) => (
+                    <SingleProduct prod={prod} key={key} />
+                ))}
+            </div>
+
+            <Filter />
         </div>
-      </div>
 
     )
+
+
 }
 
 export default Home

@@ -1,15 +1,14 @@
 import React from 'react'
 import "./Header.css";
-import logo from "./Myntra logo.png"
-import cartLogo from "./Cart logo.png"
+import logo from "./img/forever7.png"
+import cartLogo from "./img/Cart logo.png"
 import { NavLink } from 'react-router-dom';
 import { CartState } from '../Context/Context';
 
 const Header = () => {
 
   const {
-    state: { cart },
-    dispatch,
+
     productDispatch,
   } = CartState();
 
@@ -17,13 +16,9 @@ const Header = () => {
     <div className='header-container'>
       <div className='left'>
         <NavLink to="/">
-          <img src={logo} className="myntra-logo" />
+          <img src={logo} className="forever7-logo" alt='' />
         </NavLink>
-        <div className='header-categories'>
-          <p>Men</p>
-          <p>Women</p>
-          <p>Kid</p>
-        </div>
+
       </div>
 
       <div className='searchBar'>
@@ -37,7 +32,7 @@ const Header = () => {
 
       <div className='right'>
         <NavLink to="/cart">
-          <img src={cartLogo} className="cart-logo" />
+          <img src={cartLogo} className="cart-logo" alt='' />
         </NavLink>
       </div>
     </div>

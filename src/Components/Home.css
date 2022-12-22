@@ -3,8 +3,9 @@
     
   }
   .productContainer {
+    background-color: rgb(205, 230, 155);
     display: flex;
-    width: 75%;
+    width: 80%;
     flex-wrap: wrap;
     justify-content: space-around;
   }
